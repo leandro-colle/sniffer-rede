@@ -16,3 +16,6 @@ def format_multi_line(prefix, string, size=80):
         if size % 2:
             size -= 1
     return '\n'.join([prefix + line for line in textwrap.wrap(string, size)])
+
+def convert_bytedata_to_string(raw_data):
+    return " ".join(map('{:02x}'.format, raw_data))
